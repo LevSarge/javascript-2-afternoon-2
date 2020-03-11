@@ -17,7 +17,9 @@ var arr = [10,20,30];
   Return the first item in the given array.
 */
 
-//Code Here
+function first(arr){
+  return arr[0]
+}
 
 
 
@@ -32,7 +34,9 @@ var arr = [40,50,60];
   Return the last item in the given array.
 */
 
-//Code Here
+function last(arr){
+  return arr[2]
+}
 
 
 
@@ -47,7 +51,12 @@ var family = ['Tyler', 'Jordyn', 'Ryan', 'Chelsey', 'Ireland'];
   Loop through the given array and alert every item in the array.
 */
 
-//Code Here
+function looper(family){
+  for (let i = 0; i < family.length; i++) {
+    alert(family[i])
+    
+  }
+};
 
 
 
@@ -61,8 +70,11 @@ var letters = ['A', 'B', 'C', 'D', 'E'];
   Write a function called reversedLooper that is given letters as it's only argument. 
   Loop backwards, starting at the end of the letters array, alerting every item in the array.
 */
-
-//Code Here
+function reversedLooper(letters){
+for (let i = letters.length - 1; i >= 0; i--) {
+  alert(letters[i])
+}
+};
 
 
 
@@ -78,7 +90,12 @@ var nums = [1,2,3,6,22,98,45,23,22,12];
 */
 
 //Code Here
-
+function evenFinder(nums){
+  for (let i = 0; i < nums[i]; i++){
+  nums.splice(i,1, nums[i]%2)}
+  return nums
+}
+;
 
 
 
@@ -106,7 +123,7 @@ var numbersArray = [1,2,34,54,55,34,32,11,19,17,54,66,13];
   and the second item in the array being the odds array (all the odd values from numbersArray).
 */
 
-//Code Here
+
 
 
 
@@ -128,7 +145,15 @@ var getRandomArbitrary = function() {
   If it is, return true, if it's not, return false
 */
 
-//Code Here
+function finder(arr){
+  let randomNumber = getRandomArbitrary()
+  for(let i =o; i < arr.length; i++){
+  if(arr[i] === randomNumber){
+    return true
+  }
+  return false
+}
+}
 
 
 
@@ -157,9 +182,23 @@ var myGroceryList = ['chips', 'pizza', 'hotpockets', 'MtnDew', 'corndogs'];
   addItem() --> [];
 */
 
-//Code Here
+function removeItem(myGroceryList, item){
+  if(myGroceryList && item){
+    for(let i = 0; i < myGroceryList.length; i++){
+      if(myGroceryList[i] === item){
+        myGroceryList.splice(i,1)
+      }return myGroceryList
+    }
+  }
+  else {
+  return []
+}
+} 
 
-
+function addItem(myGroceryList, item){
+  myGroceryList.push(item)
+  return myGroceryList
+}
 
 ////////// PROBLEM 9 //////////
 
@@ -208,7 +247,14 @@ for(var i = 0; i < num2; i++){
   Return the longer of the two arrays.
 */
 
-//Code Here
+function longer(arr1, arr2){
+  if(arr1.length > arr2.length){
+    return arr1
+  }
+  else {
+    return arr2
+  }
+}
 
 
 
@@ -220,7 +266,17 @@ for(var i = 0; i < num2; i++){
   Example: var arr1 = [1,2,3,4]; var arr2 = [2,4,5,6]; newArray // [2,4]
 */
 
-//Code Here
+function both(arr1, arr2){
+  let matchingNums = []
+  for(let i = 0; i < arr1.length; i++){
+    for(let j; j < arr2.length; j++){
+      if(arr1[i] === arr2[j]){
+        matchingNums.push(arr1[i])
+      }
+    }
+  }
+  return matchingNums
+}
 
 
 
